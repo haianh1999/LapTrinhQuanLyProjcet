@@ -136,9 +136,19 @@
     <Compile Include="Migrations\202203090223069_InitialCreate.Designer.cs">
       <DependentUpon>202203090223069_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203090231460_CreateTheloai.cs" />
+    <Compile Include="Migrations\202203090231460_CreateTheloai.Designer.cs">
+      <DependentUpon>202203090231460_CreateTheloai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203090234223_CreateSach.cs" />
+    <Compile Include="Migrations\202203090234223_CreateSach.Designer.cs">
+      <DependentUpon>202203090234223_CreateSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\LTQLDBContext.cs" />
+    <Compile Include="Models\Sach.cs" />
     <Compile Include="Models\Tacgia.cs" />
+    <Compile Include="Models\Theloai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +207,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202203090223069_InitialCreate.resx">
       <DependentUpon>202203090223069_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203090231460_CreateTheloai.resx">
+      <DependentUpon>202203090231460_CreateTheloai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203090234223_CreateSach.resx">
+      <DependentUpon>202203090234223_CreateSach.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

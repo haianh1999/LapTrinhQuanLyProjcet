@@ -83,3 +83,5 @@ E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapL
 E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.pdb
 E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.Migrations.InitialCreate.resources
 E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.csproj.GenerateResource.cache
+E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.Migrations.CreateTheloai.resources
+E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.Migrations.CreateSach.resources

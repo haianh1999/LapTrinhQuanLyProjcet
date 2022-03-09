@@ -10,8 +10,12 @@ namespace HTHABaiTapLon883.Models
         public LTQLDBContext()
             : base("name=LTQLDBContext")
         { }
-             public virtual DbSet<Tacgia> TacGias { get; set; }
- 
+        public virtual DbSet<Tacgia> TacGias { get; set; }
+        public virtual DbSet<Theloai> Theloais { get; set; }
+        public virtual DbSet<Sach> Saches { get; set; }
+
+
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
