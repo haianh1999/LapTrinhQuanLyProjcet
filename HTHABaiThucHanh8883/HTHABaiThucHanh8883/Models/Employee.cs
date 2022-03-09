@@ -9,7 +9,7 @@ namespace HTHABaiThucHanh8883.Models
     public class Employee
     {
         [Key]
-        public string NamePerson { get; set; }
-        public string IDSPerson { get; set; }
+        public string NameEmployee { get; set; }
+        public string IDSEmployee { get; set; }
     }
 }
