@@ -13,6 +13,7 @@ namespace HTHABaiTapLon883.Models
         public virtual DbSet<Tacgia> TacGias { get; set; }
         public virtual DbSet<Theloai> Theloais { get; set; }
         public virtual DbSet<Sach> Saches { get; set; }
+        public virtual DbSet<Nhaxuatban> Nhaxuatbans { get; set; }
 
 
 
