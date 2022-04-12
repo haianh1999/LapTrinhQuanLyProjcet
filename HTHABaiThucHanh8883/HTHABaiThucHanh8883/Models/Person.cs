@@ -11,7 +11,7 @@ namespace HTHABaiThucHanh8883.Models
     public class Person
     {
         [Key]
-        public string NamePerson { get; set; }
-        public string IDSPerson { get; set; }
+        public string PersonID { get; set; }
+        public string PersonName{ get; set; }
     }
 }

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<HTHABaiThucHanh8883.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDStudent)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDStudent)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NameStudent }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NameStudent }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NameStudent })
+        </td>
+    </tr>
+}
+
+</table>

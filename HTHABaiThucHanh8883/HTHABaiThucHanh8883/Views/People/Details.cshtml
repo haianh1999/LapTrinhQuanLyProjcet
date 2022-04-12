@@ -1,0 +1,27 @@
+﻿@model HTHABaiThucHanh8883.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IDSPerson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDSPerson)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NamePerson }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
