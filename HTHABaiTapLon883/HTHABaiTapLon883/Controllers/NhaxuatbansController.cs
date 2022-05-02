@@ -46,7 +46,7 @@ namespace HTHABaiTapLon883.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaTacGia,TenTacGia")] Nhaxuatban nhaxuatban)
+        public ActionResult Create([Bind(Include = "MaNhaXuatBan,TenNhaXuatban")] Nhaxuatban nhaxuatban)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace HTHABaiTapLon883.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaTacGia,TenTacGia")] Nhaxuatban nhaxuatban)
+        public ActionResult Edit([Bind(Include = "MaNhaXuatBan,TenNhaXuatban")] Nhaxuatban nhaxuatban)
         {
             if (ModelState.IsValid)
             {

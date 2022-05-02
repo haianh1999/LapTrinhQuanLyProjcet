@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NhaxuatbansController.cs" />
     <Compile Include="Controllers\SachesController.cs" />
@@ -152,9 +153,27 @@
     <Compile Include="Migrations\202203211229156_CreateNhaXuatBan.Designer.cs">
       <DependentUpon>202203211229156_CreateNhaXuatBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205021343481_createaccount.cs" />
+    <Compile Include="Migrations\202205021343481_createaccount.Designer.cs">
+      <DependentUpon>202205021343481_createaccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205021350308_createaccount1.cs" />
+    <Compile Include="Migrations\202205021350308_createaccount1.Designer.cs">
+      <DependentUpon>202205021350308_createaccount1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205021351231_role.cs" />
+    <Compile Include="Migrations\202205021351231_role.Designer.cs">
+      <DependentUpon>202205021351231_role.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Chitietdonhang.cs" />
+    <Compile Include="Models\Donhang.cs" />
+    <Compile Include="Models\Encrytion.cs" />
     <Compile Include="Models\LTQLDBContext.cs" />
     <Compile Include="Models\Nhaxuatban.cs" />
+    <Compile Include="Models\Process\StringProcess.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Sach.cs" />
     <Compile Include="Models\Tacgia.cs" />
     <Compile Include="Models\Theloai.cs" />
@@ -211,6 +230,8 @@
     <Content Include="Views\Theloais\Details.cshtml" />
     <Content Include="Views\Theloais\Edit.cshtml" />
     <Content Include="Views\Theloais\Index.cshtml" />
+    <Content Include="Views\Accounts\Login.cshtml" />
+    <Content Include="Views\Accounts\Register.cshtml" />
     <Content Include="Views\Nhaxuatbans\Create.cshtml" />
     <Content Include="Views\Nhaxuatbans\Delete.cshtml" />
     <Content Include="Views\Nhaxuatbans\Details.cshtml" />
@@ -245,6 +266,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203211229156_CreateNhaXuatBan.resx">
       <DependentUpon>202203211229156_CreateNhaXuatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205021343481_createaccount.resx">
+      <DependentUpon>202205021343481_createaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205021350308_createaccount1.resx">
+      <DependentUpon>202205021350308_createaccount1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205021351231_role.resx">
+      <DependentUpon>202205021351231_role.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

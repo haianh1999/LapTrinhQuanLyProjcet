@@ -15,6 +15,8 @@ namespace HTHABaiTapLon883.Models
         public virtual DbSet<Sach> Saches { get; set; }
         public virtual DbSet<Nhaxuatban> Nhaxuatbans { get; set; }
 
+        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
 
 
 

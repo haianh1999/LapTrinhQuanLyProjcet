@@ -9,7 +9,7 @@ namespace HTHABaiTapLon883.Models
     public class Nhaxuatban
     {
         [Key]
-        public string MaTacGia { get; set; }
-        public string TenTacGia { get; set; }
+        public string MaNhaXuatBan { get; set; }
+        public string TenNhaXuatban { get; set; }
     }
 }

@@ -7,13 +7,14 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using HTHABaiTapLon883.Models;
+using HTHABaiTapLon883.Models.Process;
 
 namespace HTHABaiTapLon883.Controllers
 {
     public class SachesController : Controller
     {
         private LTQLDBContext db = new LTQLDBContext();
-
+        StringProcess genkey = new StringProcess();
         // GET: Saches
         public ActionResult Index()
         {
@@ -36,8 +37,23 @@ namespace HTHABaiTapLon883.Controllers
         }
 
         // GET: Saches/Create
+        [Authorize]
         public ActionResult Create()
         {
+            if (db.Saches.OrderByDescending(m => m.IDSach).Count() == 0)
+            {
+                var newID = "Sach01";
+                ViewBag.newproID = newID;
+            }
+            else
+            {
+                var PdID = db.Saches.OrderByDescending(m => m.IDSach).FirstOrDefault().IDSach;
+                var newID = genkey.AutogenrateCode(PdID);
+                ViewBag.newproID = newID;
+            }
+            ViewBag.MaTacGia = new SelectList(db.TacGias, "MaTacGia", "TenTacGia");
+            ViewBag.MaTheLoai = new SelectList(db.Theloais, "MaTheLoai", "TenTheLoai");
+            ViewBag.MaNhaXuatBan = new SelectList(db.Nhaxuatbans, "MaTheLoai", "TenTheLoai");
             return View();
         }
 
@@ -59,6 +75,7 @@ namespace HTHABaiTapLon883.Controllers
         }
 
         // GET: Saches/Edit/5
+        [Authorize]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -90,6 +107,7 @@ namespace HTHABaiTapLon883.Controllers
         }
 
         // GET: Saches/Delete/5
+        [Authorize]
         public ActionResult Delete(string id)
         {
             if (id == null)
