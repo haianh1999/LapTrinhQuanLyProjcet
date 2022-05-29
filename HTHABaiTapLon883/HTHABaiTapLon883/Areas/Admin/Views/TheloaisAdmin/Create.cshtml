@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>Create</h2>
@@ -19,6 +20,8 @@
             @Html.LabelFor(model => model.TenTheLoai, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TenTheLoai, new { htmlAttributes = new { @class = "form-control" } })
+                @*<input type="text" name="TenTheLoai" value="@ViewBag.newproID" class="form-control" />*@
+
                 @Html.ValidationMessageFor(model => model.TenTheLoai, "", new { @class = "text-danger" })
             </div>
         </div>

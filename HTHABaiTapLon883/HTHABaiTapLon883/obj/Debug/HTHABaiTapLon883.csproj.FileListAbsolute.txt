@@ -88,3 +88,5 @@ E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapL
 E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.Migrations.createaccount.resources
 E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.Migrations.createaccount1.resources
 E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.Migrations.role.resources
+E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.Migrations.reupdate.resources
+E:\LaptrinhQuanlyProjcet\HTHABaiTapLon883\HTHABaiTapLon883\obj\Debug\HTHABaiTapLon883.csprojAssemblyReference.cache

@@ -11,5 +11,6 @@ namespace HTHABaiTapLon883.Models
         [Key]
         public string MaNhaXuatBan { get; set; }
         public string TenNhaXuatban { get; set; }
+        public ICollection<Sach> sachs { get; set; }
     }
 }

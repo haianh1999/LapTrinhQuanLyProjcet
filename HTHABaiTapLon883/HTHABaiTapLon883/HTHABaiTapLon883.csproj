@@ -128,9 +128,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\NhaxuatbansAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SachesAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TacgiasAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TheloaisAdminController.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NhaxuatbansController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\SachesController.cs" />
     <Compile Include="Controllers\TacgiasController.cs" />
     <Compile Include="Controllers\TheloaisController.cs" />
@@ -165,10 +171,12 @@
     <Compile Include="Migrations\202205021351231_role.Designer.cs">
       <DependentUpon>202205021351231_role.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205171602085_re-update.cs" />
+    <Compile Include="Migrations\202205171602085_re-update.Designer.cs">
+      <DependentUpon>202205171602085_re-update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
-    <Compile Include="Models\Chitietdonhang.cs" />
-    <Compile Include="Models\Donhang.cs" />
     <Compile Include="Models\Encrytion.cs" />
     <Compile Include="Models\LTQLDBContext.cs" />
     <Compile Include="Models\Nhaxuatban.cs" />
@@ -177,6 +185,7 @@
     <Compile Include="Models\Sach.cs" />
     <Compile Include="Models\Tacgia.cs" />
     <Compile Include="Models\Theloai.cs" />
+    <Compile Include="Models\UserRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +199,29 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\Admin\Views\SachesAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\SachesAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\SachesAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\SachesAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\SachesAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaxuatbansAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaxuatbansAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaxuatbansAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaxuatbansAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaxuatbansAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TacgiasAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TacgiasAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\TacgiasAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\TacgiasAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TacgiasAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TheloaisAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TheloaisAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\TheloaisAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\TheloaisAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TheloaisAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -215,31 +247,25 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Tacgias\Create.cshtml" />
-    <Content Include="Views\Tacgias\Delete.cshtml" />
     <Content Include="Views\Tacgias\Details.cshtml" />
-    <Content Include="Views\Tacgias\Edit.cshtml" />
     <Content Include="Views\Tacgias\Index.cshtml" />
-    <Content Include="Views\Saches\Create.cshtml" />
-    <Content Include="Views\Saches\Delete.cshtml" />
     <Content Include="Views\Saches\Details.cshtml" />
-    <Content Include="Views\Saches\Edit.cshtml" />
     <Content Include="Views\Saches\Index.cshtml" />
-    <Content Include="Views\Theloais\Create.cshtml" />
-    <Content Include="Views\Theloais\Delete.cshtml" />
     <Content Include="Views\Theloais\Details.cshtml" />
-    <Content Include="Views\Theloais\Edit.cshtml" />
     <Content Include="Views\Theloais\Index.cshtml" />
     <Content Include="Views\Accounts\Login.cshtml" />
     <Content Include="Views\Accounts\Register.cshtml" />
-    <Content Include="Views\Nhaxuatbans\Create.cshtml" />
-    <Content Include="Views\Nhaxuatbans\Delete.cshtml" />
     <Content Include="Views\Nhaxuatbans\Details.cshtml" />
-    <Content Include="Views\Nhaxuatbans\Edit.cshtml" />
     <Content Include="Views\Nhaxuatbans\Index.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Roles\Details.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -275,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205021351231_role.resx">
       <DependentUpon>202205021351231_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205171602085_re-update.resx">
+      <DependentUpon>202205171602085_re-update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
